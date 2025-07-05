@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(/fonts/Poppins-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(/fonts/Poppins-Medium.woff2) format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(/fonts/Poppins-SemiBold.woff2) format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(/fonts/Poppins-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply overflow-x-hidden font-poppins text-black/80  text-base;
+  }
+  .container {
+    @apply max-w-7xl w-full px-4 mx-auto;
+  }
+  h1 {
+    @apply text-[clamp(2rem,_6vw,_3rem)] font-bold;
+  }
+  h2 {
+    @apply text-[clamp(1.5rem,_5vw,_2.5rem)] font-bold;
+  }
+  h3 {
+    @apply text-[clamp(1.25rem,_4vw,_2rem)] font-bold;
+  }
+  h4 {
+    @apply text-[clamp(1rem,_3vw,_1.75rem)] font-bold;
+  }
+  h5 {
+    @apply text-[clamp(1rem,_2.5vw,_1.5rem)] font-bold;
+  }
+  h6 {
+    @apply text-[clamp(0.875rem,_2vw,_1.25rem)] font-bold;
+  }
+}
+@layer components {
+  .headerNav ul li:hover {
+    @apply text-blue-500;
+  }
+  .headerNav ul.open {
+    @apply right-0 opacity-100 h-fit shadow-md max-w-7xl w-full px-4 pb-3 md:pb-0 md:shadow-none;
+  }
+  .toggleMenu span {
+    @apply bg-black/80 inline-block w-5 content-["*"] h-[2px] rounded-xl;
+  }
+  .toggleMenu.open span:first-child {
+    @apply rotate-45  translate-y-2;
+  }
+  .toggleMenu.open span:nth-child(2) {
+    @apply opacity-0;
+  }
+  .toggleMenu.open span:last-child {
+    @apply -rotate-45  -translate-y-1;
+  }
+  .title {
+    @apply mt-2 mb-4 md:mb-6 leading-10;
+  }
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium w-full lg:w-auto;
+  }
+  .btn--blue {
+    @apply bg-blue-600 hover:bg-blue-700 text-white;
+  }
+  .btn--gray {
+    @apply border border-gray-300 hover:bg-gray-100;
+  }
+  .card {
+    @apply bg-white p-8 rounded-xl shadow-md hover:shadow-lg;
+  }
+  .card img {
+    @apply size-16 mb-6;
+  }
+  .card h3 {
+    @apply font-semibold mb-3;
+  }
+  .card p {
+    @apply mb-5;
+  }
+  .card button {
+    @apply text-blue-600 hover:text-blue-700 font-medium;
+  }
+  #about ul {
+    @apply flex mb-4;
+  }
+  .testimonialsItem {
+    @apply bg-white py-8 px-12 rounded-xl shadow-md text-center;
+  }
+  .testimonialsItem img {
+    @apply w-20 h-20 object-cover rounded-full mx-auto mb-4;
+  }
+  .testimonialsItem p {
+    @apply italic mb-4;
+  }
+  .tns-outer {
+    @apply overflow-hidden max-w-6xl;
+  }
+  .tns-outer > button {
+    @apply hidden;
+  }
+  .tns-nav {
+    @apply mt-6 flex justify-center gap-2;
+  }
+  .tns-nav button {
+    @apply size-3 bg-gray-300 rounded-full;
+  }
+  .tns-nav button.tns-nav-active {
+    @apply bg-blue-500;
+  }
+}
