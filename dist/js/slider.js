@@ -1,14 +1,14 @@
-var slider = tns({
+const slider = tns({
   container: ".testimonialsSlider",
   items: 1,
   slideBy: 1,
-  speed: 200,
+  speed: 100,
   autoplay: true,
   nav: true,
+  navPosition: "bottom",
   autoplayButtonOutput: false,
   rewind: true,
-  navPosition: "bottom",
-  containerControls: "#controls",
+  controlsContainer: "#controls",
   prevButton: ".prev",
   nextButton: ".next",
 });

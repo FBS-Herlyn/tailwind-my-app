@@ -31,6 +31,9 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply scroll-smooth scroll-p-16;
+  }
   body {
     @apply overflow-x-hidden font-poppins text-black/80  text-base;
   }
@@ -50,10 +53,10 @@
     @apply text-[clamp(1rem,_3vw,_1.75rem)] font-bold;
   }
   h5 {
-    @apply text-[clamp(1rem,_2.5vw,_1.5rem)] font-bold;
+    @apply text-xl font-semibold;
   }
   h6 {
-    @apply text-[clamp(0.875rem,_2vw,_1.25rem)] font-bold;
+    @apply text-lg font-semibold;
   }
 }
 @layer components {
@@ -61,7 +64,7 @@
     @apply text-blue-500;
   }
   .headerNav ul.open {
-    @apply right-0 opacity-100 h-fit shadow-md max-w-7xl w-full px-4 pb-3 md:pb-0 md:shadow-none;
+    @apply right-0 opacity-100 h-fit shadow-md max-w-7xl w-full top-[5.5rem] px-4 pb-3 md:pb-0 md:shadow-none;
   }
   .toggleMenu span {
     @apply bg-black/80 inline-block w-5 content-["*"] h-[2px] rounded-xl;
@@ -106,10 +109,10 @@
     @apply flex mb-4;
   }
   .testimonialsItem {
-    @apply bg-white py-8 px-12 rounded-xl shadow-md text-center;
+    @apply bg-white py-10 px-12 rounded-xl shadow-md text-center;
   }
   .testimonialsItem img {
-    @apply w-20 h-20 object-cover rounded-full mx-auto mb-4;
+    @apply size-20 object-cover rounded-full mx-auto mb-4;
   }
   .testimonialsItem p {
     @apply italic mb-4;
@@ -121,12 +124,17 @@
     @apply hidden;
   }
   .tns-nav {
-    @apply mt-6 flex justify-center gap-2;
+    @apply mt-7 flex justify-center gap-2;
   }
   .tns-nav button {
-    @apply size-3 bg-gray-300 rounded-full;
+    @apply size-3 bg-black/40 rounded-full;
   }
   .tns-nav button.tns-nav-active {
     @apply bg-blue-500;
+  }
+
+  form input,
+  textarea {
+    @apply w-full px-4 py-3 border border-b-black/40 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 mt-3 mb-6;
   }
 }
