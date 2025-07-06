@@ -135,6 +135,6 @@
 
   form input,
   textarea {
-    @apply w-full px-4 py-3 border border-b-black/40 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 mt-3 mb-6;
+    @apply w-full px-4 py-3 border border-black/30 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 mt-3 mb-6;
   }
 }

@@ -892,7 +892,7 @@ form input,
   width: 100%;
   border-radius: 0.5rem;
   border-width: 1px;
-  border-bottom-color: rgb(0 0 0 / 0.4);
+  border-color: rgb(0 0 0 / 0.3);
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.75rem;
